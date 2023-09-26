@@ -26,6 +26,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -41,7 +42,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = Color.LightGray
                 ) {
                     Greeting()
                 }
@@ -56,10 +57,10 @@ data class ImageInfo(val resourceId: Int, val description: String, val author: S
 fun Greeting(modifier: Modifier = Modifier) {
 
     val images = listOf(
-        ImageInfo(resourceId = R.drawable.london_bridge,description ="London Bridge", author="Frank Shamrock" ),
-        ImageInfo(resourceId = R.drawable.eiffel_tower,description ="Eiffel Tower", author="Royce Gracie"  ),
-        ImageInfo(resourceId = R.drawable.statue_of_liberty,description ="Statue of liberty", author="Tim Dillion"  ))
-
+        ImageInfo(resourceId = R.drawable.london_bridge,description ="London Bridge", author="Frank Shamrock (2021)" ),
+        ImageInfo(resourceId = R.drawable.eiffel_tower,description ="Eiffel Tower", author="Royce Gracie (2019)"  ),
+        ImageInfo(resourceId = R.drawable.statue_of_liberty,description ="Statue of liberty", author="Tim Dillion (2020)")
+    )
         Column(modifier = Modifier.padding(top= 20.dp),
                           verticalArrangement = Arrangement.Center,
                           horizontalAlignment = Alignment.CenterHorizontally  ) {
