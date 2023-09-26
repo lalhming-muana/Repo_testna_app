@@ -72,6 +72,7 @@ fun Greeting(modifier: Modifier = Modifier) {
                     }
 
                     Button(onClick = { /*TODO*/ },
+                            modifier= Modifier.padding(start = 10.dp),
                         ) {
                         Text("Next")
                     }
